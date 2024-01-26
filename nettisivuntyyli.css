@@ -1,0 +1,90 @@
+/*tässä eriteltynä alkup. html-koodista kaikki css*/ 
+
+body {
+    font-family: "Verdana", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 55;
+    border-radius: 10px;
+}
+
+header {
+    background: linear-gradient(to bottom, #4CAF50, #2196F3);
+    color: #2c2828;
+    padding: 10px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 10; /* Adjust the weight as needed */
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Verdana", sans-serif;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 99%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #5c6061;
+}
+
+section {
+    padding: 20px;
+}
+
+img {
+    width: 1280px; /* Adjust the width as needed */
+    border-radius: 10px; /* Adjust the border-radius to round the corners */
+}
+
+footer {
+    background-color: #33333377;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-family: "Verdana", sans-serif;
+}
+
+.box {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #999;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.divider {
+    border-top: 1px solid #c5c5c5; /* Adjust thickness and color as needed */
+    margin-top: 20px; /* Adjust spacing as needed */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
