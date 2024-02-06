@@ -121,8 +121,3 @@ footer {
 .modern-table tbody tr:hover {
     background-color: #f2f2f2; /* Hover row background color */
 }
-
-#game-container {
-    margin: 0 auto; /* Set left and right margin to auto */
-    /* Other styles remain unchanged */
-}
