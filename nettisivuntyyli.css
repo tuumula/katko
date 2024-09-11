@@ -16,7 +16,7 @@ body {
 header {
     background: linear-gradient(to top, #dce6dd, #aab6c0);
     color: #2c2828;
-    padding: 20px 0; /* Increased padding for better spacing */
+    padding: 10px 0; /* Increased padding for better spacing */
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600; /* Increased font weight for boldness */
@@ -34,8 +34,7 @@ h1 {
 nav {
     background-color: #333;
     padding: 20px 0; /* Increased padding for better spacing */
-    text-align: center;
-    border-radius: 10px; /* Rounded corners for a softer look */
+    text-align: center; 
     box-sizing: border-box;
     width: 100%; /* Adjusted width to fill the container */
     margin: 10px auto; /* Center the navigation and add margin */
@@ -99,7 +98,7 @@ footer {
     width: 100%;
     max-width: 600px; /* Adjust the max-width as needed */
     margin: 0 auto;
-    font-family: 'Arial', sans-serif; /* Choose a modern font */
+    font-family: 'Montserrat', sans-serif; /* Choose a modern font */
 }
 
 .modern-table th,
@@ -110,7 +109,7 @@ footer {
 }
 
 .modern-table th {
-    background-color: #f2f2f2; /* Header background color */
+    background-color: #6b6b6b; /* Header background color */
     color: #333; /* Header text color */
 }
 
@@ -120,4 +119,34 @@ footer {
 
 .modern-table tbody tr:hover {
     background-color: #f2f2f2; /* Hover row background color */
+}
+
+/* Fade-in class for smoother content appearance */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none; /* Hidden by default */
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
 }
