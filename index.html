@@ -81,7 +81,86 @@
                     });
             }
         </script>
+
+        <div class="divider"></div>
+
+        <h1>Trivia Visa</h1>
+    <p id="question">Ladataan kysymystä...</p>
+
+    <div id="answers"></div>
+
+    <div id="result"></div>
+
+    <script>
+        // Hae kysymys Open Trivia Database API:sta
+        function fetchTriviaQuestion() {
+            const url = "https://opentdb.com/api.php?amount=1&type=multiple";
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    displayQuestion(data.results[0]);
+                })
+                .catch(error => {
+                    console.log("Virhe haettaessa triviaa:", error);
+                    document.getElementById('question').textContent = "Kysymyksen lataaminen epäonnistui.";
+                });
+        }
+
+        // Näytä kysymys ja vastausvaihtoehdot
+        function displayQuestion(triviaData) {
+            const questionElement = document.getElementById('question');
+            const answersElement = document.getElementById('answers');
+            const resultElement = document.getElementById('result');
+
+            // Tyhjennä edelliset vastaukset
+            answersElement.innerHTML = '';
+            resultElement.innerHTML = '';
+
+            // Näytä kysymys
+            questionElement.innerHTML = triviaData.question;
+
+            // Yhdistä oikea ja väärät vastaukset yhdeksi listaksi
+            const correctAnswer = triviaData.correct_answer;
+            let answers = [...triviaData.incorrect_answers];
+            answers.push(correctAnswer);
+
+            // Sekoita vastausvaihtoehdot satunnaiseen järjestykseen
+            answers = shuffleArray(answers);
+
+            // Luo nappulat vastausvaihtoehdoille
+            answers.forEach(answer => {
+                const button = document.createElement('button');
+                button.classList.add('answer');
+                button.innerHTML = answer;
+                button.onclick = () => checkAnswer(answer, correctAnswer);
+                answersElement.appendChild(button);
+            });
+        }
+
+        // Tarkista vastaus
+        function checkAnswer(selectedAnswer, correctAnswer) {
+            const resultElement = document.getElementById('result');
+            if (selectedAnswer === correctAnswer) {
+                resultElement.innerHTML = "<span style='color:green;'>Oikein!</span>";
+            } else {
+                resultElement.innerHTML = "<span style='color:red;'>Väärin! Oikea vastaus on: " + correctAnswer + "</span>";
+            }
+            setTimeout(fetchTriviaQuestion, 3000); // Hae uusi kysymys 3 sekunnin kuluttua
+        }
+
+        // Apufunktio vastausten sekoittamiseen
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Lataa ensimmäinen kysymys sivun latautuessa
+        window.onload = fetchTriviaQuestion;
         
+    </script>
         <div class="divider"></div>
 
         <h2>CHANGE LOG: </h2>
