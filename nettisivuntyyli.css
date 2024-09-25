@@ -191,3 +191,11 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
 }
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.fade-in.visible {
+    opacity: 1;
+}
