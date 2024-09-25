@@ -22,8 +22,8 @@ header {
     text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: 2px solid #333;
-    background-image: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png'); /* Add your background image */
-    background-size: cover; /* Cover the whole header */
+    background-image: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png');
+    background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
     border-radius: 0 0 15px 15px; /* Add rounded bottom corners */
@@ -34,6 +34,7 @@ nav {
     background-color: #a7bed3; /* Softer pastel color for the nav */
     padding: 10px;
     text-align: center;
+    margin-top: 20px; /* Extra space between header and nav */
 }
 
 nav a {
@@ -73,11 +74,12 @@ img {
 /* Footer */
 footer {
     background-color: #ffb6b9; /* Softer pastel footer color */
-    color: #333; /* Change to dark text to make it visible */
+    color: #333;
     padding: 20px 0;
     text-align: center;
     font-size: 1rem;
     letter-spacing: 1px;
+    margin-bottom: 50px; /* Added space at the bottom of the footer */
 }
 
 footer p {
@@ -104,7 +106,7 @@ footer p {
 /* Modern Table Styling */
 .modern-table {
     width: 100%;
-    max-width: 800px;
+    max-width: 1280px; /* Set max-width to match footer width */
     margin: 20px auto;
     border-collapse: separate;
     border-spacing: 0;
