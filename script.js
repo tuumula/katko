@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Function to fade in content on page load
+// Function to fade in content on page's load
 function fadeInOnLoad() {
     const fadeElements = document.querySelectorAll('.fade-in');
 
