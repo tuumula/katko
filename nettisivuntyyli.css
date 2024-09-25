@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #f7f2f2; /* Softer pastel background */
     color: #333;
     height: 100vh;
     font-size: 16px;
@@ -13,20 +13,25 @@ body {
 
 /* Header Styling */
 header {
-    background: linear-gradient(135deg, #f85032, #e73827);
+    background: linear-gradient(135deg, #ffb6b9, #fae3d9); /* Pastel gradient */
     color: white;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: 2px solid #333;
+    background-image: url('https://media.istockphoto.com/id/809971888/photo/night-sky-landscape.jpg?s=612x612&w=0&k=20&c=ku3RWu4DQ8ErN-KbT1Act72LMocTwSAAm3UDkLiako0='); /* Add your background image */
+    background-size: cover; /* Cover the whole header */
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 0 0 15px 15px; /* Add rounded bottom corners */
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
+    background-color: #a7bed3; /* Softer pastel color for the nav */
     padding: 10px;
     text-align: center;
 }
@@ -38,11 +43,11 @@ nav a {
     margin: 0 10px;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    border-radius: 25px; /* Rounded links */
+    border-radius: 25px;
 }
 
 nav a:hover {
-    background-color: #f85032;
+    background-color: #ffb6b9; /* Pastel hover color */
 }
 
 /* Main Section */
@@ -62,22 +67,26 @@ img {
     width: 100%;
     max-width: 1280px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 footer {
-    background-color: #f85032;
-    color: white;
+    background-color: #ffb6b9; /* Softer pastel footer color */
+    color: #333; /* Change to dark text to make it visible */
     padding: 20px 0;
     text-align: center;
     font-size: 1rem;
     letter-spacing: 1px;
 }
 
+footer p {
+    color: #333; /* Ensure the copyright text is visible */
+}
+
 /* Box (Card-like container) */
 .box {
-    background-color: white;
+    background-color: #faf3e0; /* Soft pastel background for box */
     padding: 30px;
     margin: 20px auto;
     max-width: 800px;
@@ -110,7 +119,7 @@ footer {
 }
 
 .modern-table th {
-    background-color: #f85032;
+    background-color: #a7bed3; /* Softer pastel header color */
     color: white;
 }
 
@@ -129,7 +138,7 @@ footer {
     bottom: 30px;
     right: 30px;
     padding: 10px 20px;
-    background-color: #f85032;
+    background-color: #ffb6b9;
     color: white;
     border: none;
     border-radius: 25px;
@@ -140,7 +149,7 @@ footer {
 }
 
 #backToTopBtn:hover {
-    background-color: #e73827;
+    background-color: #fae3d9;
 }
 
 /* Game Section */
@@ -149,7 +158,7 @@ footer {
     padding: 30px;
     border-radius: 15px;
     max-width: 800px;
-    background-color: white;
+    background-color: #faf3e0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -167,14 +176,14 @@ button {
     margin: 10px;
     border: none;
     border-radius: 25px;
-    background-color: #f85032;
+    background-color: #a7bed3; /* Softer pastel color */
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #e73827;
+    background-color: #ffb6b9;
 }
 
 #message {
