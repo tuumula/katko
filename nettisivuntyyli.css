@@ -105,7 +105,7 @@ footer p {
 /* Modern Table Styling */
 .modern-table {
     width: 100%;
-    max-width: 1280px; /* Set max-width to match footer width */
+    max-width: 800px; /* Set max-width to match footer width */
     margin: 20px auto;
     border-collapse: separate;
     border-spacing: 0;
@@ -192,10 +192,3 @@ button:hover {
     font-weight: bold;
 }
 
-.fade-in {
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-.fade-in.visible {
-    opacity: 1;
-}
