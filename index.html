@@ -36,46 +36,6 @@
         <button id="resetButton">RESET</button>
         <p id="message">Make a guess!</p>
 
-        <div class="divider"></div>
-        
-        <h2>Get country information:</h2>
-        <input type="text" id="countryName" placeholder="Enter country name">
-        <button onclick="fetchCountryData()">Select country</button>
-    
-        <div id="countryData"></div>
-        
-        <script>
-            function fetchCountryData() {
-                const countryName = document.getElementById('countryName').value;
-                const url = 'https://restcountries.com/v3.1/name/${countryName}';
-    
-                fetch(url)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error("Country not found");
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        const country = data[0];
-                        const countryInfo = `
-                            <h2>${country.name.common}</h2>
-                            <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : "N/A"}</p>
-                            <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
-                            <p><strong>Region:</strong> ${country.region}</p>
-                            <p><strong>Subregion:</strong> ${country.subregion}</p>
-                            <p><strong>Languages:</strong> ${Object.values(country.languages).join(", ")}</p>
-                            <p><strong>Currency:</strong> ${Object.values(country.currencies)[0].name} (${Object.keys(country.currencies)[0]})</p>
-                            <p><strong>Flag:</strong></p>
-                            <img src="${country.flags.svg}" alt="Flag of ${country.name.common}" width="100">
-                        `;
-                        document.getElementById('countryData').innerHTML = countryInfo;
-                    })
-                    .catch(error => {
-                        document.getElementById('countryData').innerHTML = `<p class="error">${error.message}</p>`;
-                    });
-            }
-        </script>
     
         <div class="divider"></div>
 
