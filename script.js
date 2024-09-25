@@ -52,3 +52,7 @@ document.getElementById('backToTopBtn').addEventListener('click', function() {
 
 // Call fade-in function on page load
 window.addEventListener('load', fadeInOnLoad);
+
+document.getElementById('darkModeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});

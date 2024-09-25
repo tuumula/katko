@@ -192,3 +192,7 @@ button:hover {
     font-weight: bold;
 }
 
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
