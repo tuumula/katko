@@ -47,7 +47,7 @@
         <script>
             function fetchCountryData() {
                 const countryName = document.getElementById('countryName').value;
-                const url = `https://restcountries.com/v3.1/name/${countryName}`;
+                const url = 'https://restcountries.com/v3.1/name/${countryName}';
     
                 fetch(url)
                     .then(response => {
