@@ -22,7 +22,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: 2px solid #333;
-    background-image: url('https://media.istockphoto.com/id/1359861587/vector/blue-modern-abstract-wide-banner-with-geometric-shapes-dark-blue-abstract-background.jpg?s=612x612&w=0&k=20&c=xDMI5_-xyh_IHm2ca07x5xFTR7kRoFZJhxrq10FQra0='); /* Add your background image */
+    background-image: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png'); /* Add your background image */
     background-size: cover; /* Cover the whole header */
     background-position: center;
     background-blend-mode: overlay;
@@ -86,7 +86,7 @@ footer p {
 
 /* Box (Card-like container) */
 .box {
-    background-color: #faf3e0; /* Soft pastel background for box */
+    background-color: #a7bed3; /* Soft pastel background for box */
     padding: 30px;
     margin: 20px auto;
     max-width: 800px;
